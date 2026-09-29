@@ -1,27 +1,32 @@
-# 🛸 Rick and Morty - Jetpack Compose UI
+# 🎮 Game Vault - Sci-Fi Android Catalog
 
 ## 📝 Descripción del Proyecto
-Esta aplicación es una implementación nativa en Android de las vistas principales para un directorio de personajes de Rick and Morty. El proyecto se centra en el diseño visual y la construcción de interfaces de usuario modernas y declarativas.
+Game Vault es una aplicación nativa para Android que explora un catálogo en tiempo real de videojuegos "Free-To-Play". Diseñada bajo una estética Cyberpunk / Sci-Fi de alto contraste, la aplicación demuestra la implementación de arquitecturas escalables, consumo asíncrono de APIs REST y la construcción de interfaces de usuario avanzadas y 100% declarativas.
+
+## 🚀 Arquitectura y Stack Tecnológico
+El proyecto está estructurado bajo el patrón de diseño **MVVM (Model-View-ViewModel)**, garantizando la separación de responsabilidades entre la capa de red, la gestión del estado y la interfaz visual.
+
+*   **Lenguaje:** Kotlin
+*   **UI Framework:** Jetpack Compose (100% Declarativo)
+*   **Arquitectura:** MVVM
+*   **Networking:** Retrofit2 + Gson (Consumo de *Free-To-Play Games API*)
+*   **Carga de Imágenes:** Coil (Carga asíncrona mediante URLs y corrutinas)
+*   **Navegación:** Navigation Compose (`NavHost`, `NavController`)
 
 ## 📱 Vistas y Características
-* **Splash Screen:** Pantalla de carga inicial con un diseño inmersivo, efecto de portal construido con figuras nativas (`Canvas`) y navegación automática gestionada con corrutinas.
-* **Home (Directorio):** Interfaz principal que implementa una lista optimizada (`LazyColumn`) para renderizar los personajes. Incluye una barra de navegación inferior personalizada, tipografía estilizada y tarjetas (Cards) con indicadores de estado (Vivo/Muerto).
-* **Detail Screen (Perfil):** Vista expandida del personaje seleccionado. Destaca por el uso de recortes de imagen asimétricos, resplandores con gradientes radiales y un panel estructurado de estadísticas (Especie, Origen, Género).
+*   **Splash Screen (Cyber Interface):** Pantalla de inicialización de sistema inmersiva con bordes biselados (`CutCornerShape`), gradientes de luces de neón (`Brush`) y navegación automática gestionada mediante *Coroutines*.
+*   **Home (Launcher):** Interfaz principal dinámica que responde a los estados de carga del `ViewModel`. Implementa listas horizontales (`LazyRow`) para destacar juegos en un carrusel, *Chips* interactivos para filtrar por categoría (Shooter, MMORPG, etc.) y una grilla optimizada de 2 columnas para el catálogo general. Incluye una *Bottom Navigation Bar* personalizada.
+*   **Detail Screen (Ficha Técnica):** Vista expandida del juego seleccionado que renderiza los datos en tiempo real pasando el ID a través de la navegación. Presenta un póster inmersivo, un dashboard con estadísticas del título y un *Floating Action Button* estilizado con gradientes de cian a magenta.
 
-## 🛠️ Stack Tecnológico
-* **Lenguaje:** Kotlin
-* **UI Framework:** Jetpack Compose
-* **Navegación:** Navigation Compose (`NavHost`, `NavController`)
-* **Carga de Imágenes:** Coil (Carga asíncrona mediante URLs)
-* **IDE:** Android Studio
+## ⚙️ Instalación y Uso
 
-## 🖼️ Previsualización de la Interfaz
+Para ejecutar este proyecto en tu entorno local, asegúrate de tener instalado **Android Studio** y sigue estos pasos:
 
-| Splash Screen | Home | Detail Screen |
-| :---: | :---: | :---: |
-| <img width="250" src="https://github.com/user-attachments/assets/ac1e95c7-3479-44af-a980-ddfdc56b0906" alt="Splash" /> | <img width="250" src="https://github.com/user-attachments/assets/50d8d3ef-68ab-4871-9fa2-8aacfa149068" alt="Home" /> | <img width="250" src="https://github.com/user-attachments/assets/6c5e5663-90be-462b-abf2-60e34a5eda15" alt="Detail" /> |
-
-## 🚀 Instalación y Uso
-1. Clona este repositorio en tu máquina local:
+1. **Clonar el repositorio:**
+   Abre tu terminal y ejecuta el siguiente comando:
    ```bash
-   git clone [https://github.com/SamuPV05/Rick-Morty.git](https://github.com/SamuPV05/Rick-Morty.git)
+   git clone [https://github.com/SamuPV05/Game-Vault.git](https://github.com/SamuPV05/Game-Vault.git)
+   ---
+**Desarrollado por:**  
+👨‍💻 Samuel Pérez Valencia  
+📚 *Desarrollo de Software - Universidad Católica Luis Amigó*
